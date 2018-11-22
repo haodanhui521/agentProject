@@ -1,12 +1,20 @@
 package com.agent.core;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.system.ApplicationPidFileWriter;
 
 @SpringBootApplication
+@Slf4j
 public class AgentCoreServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(AgentCoreServiceApplication.class, args);
+
+        log.info("====启动开始====");
+        SpringApplication springApplication = new SpringApplication(AgentCoreServiceApplication.class);
+        springApplication.addListeners(new ApplicationPidFileWriter());
+        springApplication.run(args);
+        log.info("====启动结束====");
     }
 }

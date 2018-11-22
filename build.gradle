@@ -22,18 +22,22 @@ repositories {
     mavenCentral()
 }
 
+configurations {
+    all*. exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+}
+
 
 dependencies {
-    implementation('org.springframework.boot:spring-boot-starter')
-    compileOnly('org.projectlombok:lombok')
+    compile 'org.projectlombok:lombok'
     compile 'mysql:mysql-connector-java:6.0.6'
-    compile "org.springframework.boot:spring-boot-starter-data-redis"
     compile "org.springframework.boot:spring-boot-starter-log4j2"
+    compile "org.springframework.boot:spring-boot-starter-data-redis"
     compile "org.springframework.boot:spring-boot-starter-actuator"
     compile "org.springframework.boot:spring-boot-starter-aop"
     compile "org.springframework.boot:spring-boot-starter-web"
     compile "com.alibaba:druid-spring-boot-starter:1.1.10"
     compile "org.apache.commons:commons-lang3:3.8.1"
+    compile "org.springframework.boot:spring-boot-starter-jooq"
     compile "com.alibaba:fastjson:1.2.51"
     testImplementation('org.springframework.boot:spring-boot-starter-test')
 }
