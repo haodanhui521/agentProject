@@ -4,6 +4,12 @@ import com.alibaba.druid.filter.config.ConfigTools;
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.support.http.StatViewServlet;
 import com.alibaba.druid.support.http.WebStatFilter;
+import org.jooq.*;
+import org.jooq.conf.Settings;
+import org.jooq.impl.DefaultConfiguration;
+import org.jooq.impl.DefaultDSLContext;
+import org.jooq.impl.DefaultExecuteListenerProvider;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
@@ -98,6 +104,11 @@ public class DruidConfig {
         reg.addInitParameter("loginUsername", "druid");
         reg.addInitParameter("loginPassword", "druid");
         return reg;
+    }
+
+    @Bean
+    public DefaultDSLContext dsl() throws Exception {
+        return new DefaultDSLContext(druidDataSource(),SQLDialect.MYSQL);
     }
 
     @Bean
