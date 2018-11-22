@@ -17,5 +17,6 @@ public class CodeGenTools {
                 .withPassword("dba")
                 .withSchema("ifpay_ccpay");
         GenerationTool.generate(configuration);
+
     }
 }
