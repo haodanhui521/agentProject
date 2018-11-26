@@ -5,12 +5,14 @@ package com.agent.core.generated.tables.records;
 
 
 import com.agent.core.generated.tables.TradeInfo;
-import org.jooq.Record1;
-import org.jooq.impl.UpdatableRecordImpl;
+
+import java.math.BigInteger;
+import java.time.LocalDateTime;
 
 import javax.annotation.Generated;
-import java.math.BigInteger;
-import java.sql.Timestamp;
+
+import org.jooq.Record1;
+import org.jooq.impl.UpdatableRecordImpl;
 
 
 /**
@@ -26,7 +28,7 @@ import java.sql.Timestamp;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class TradeInfoRecord extends UpdatableRecordImpl<TradeInfoRecord> {
 
-    private static final long serialVersionUID = -1713773243;
+    private static final long serialVersionUID = -1946293366;
 
     /**
      * Setter for <code>ifpay_ccpay.trade_info.ID</code>.
@@ -115,57 +117,57 @@ public class TradeInfoRecord extends UpdatableRecordImpl<TradeInfoRecord> {
     /**
      * Setter for <code>ifpay_ccpay.trade_info.SUBMIT_TIME</code>. 提交时间
      */
-    public void setSubmitTime(Timestamp value) {
+    public void setSubmitTime(LocalDateTime value) {
         set(6, value);
     }
 
     /**
      * Getter for <code>ifpay_ccpay.trade_info.SUBMIT_TIME</code>. 提交时间
      */
-    public Timestamp getSubmitTime() {
-        return (Timestamp) get(6);
+    public LocalDateTime getSubmitTime() {
+        return (LocalDateTime) get(6);
     }
 
     /**
      * Setter for <code>ifpay_ccpay.trade_info.CREATE_TIME</code>. 创建时间
      */
-    public void setCreateTime(Timestamp value) {
+    public void setCreateTime(LocalDateTime value) {
         set(7, value);
     }
 
     /**
      * Getter for <code>ifpay_ccpay.trade_info.CREATE_TIME</code>. 创建时间
      */
-    public Timestamp getCreateTime() {
-        return (Timestamp) get(7);
+    public LocalDateTime getCreateTime() {
+        return (LocalDateTime) get(7);
     }
 
     /**
      * Setter for <code>ifpay_ccpay.trade_info.DONE_TIME</code>. 交易完成时间
      */
-    public void setDoneTime(Timestamp value) {
+    public void setDoneTime(LocalDateTime value) {
         set(8, value);
     }
 
     /**
      * Getter for <code>ifpay_ccpay.trade_info.DONE_TIME</code>. 交易完成时间
      */
-    public Timestamp getDoneTime() {
-        return (Timestamp) get(8);
+    public LocalDateTime getDoneTime() {
+        return (LocalDateTime) get(8);
     }
 
     /**
      * Setter for <code>ifpay_ccpay.trade_info.UPDATE_TIME</code>. 最近更新时间
      */
-    public void setUpdateTime(Timestamp value) {
+    public void setUpdateTime(LocalDateTime value) {
         set(9, value);
     }
 
     /**
      * Getter for <code>ifpay_ccpay.trade_info.UPDATE_TIME</code>. 最近更新时间
      */
-    public Timestamp getUpdateTime() {
-        return (Timestamp) get(9);
+    public LocalDateTime getUpdateTime() {
+        return (LocalDateTime) get(9);
     }
 
     /**
@@ -384,7 +386,7 @@ failed：失败
     /**
      * Create a detached, initialised TradeInfoRecord
      */
-    public TradeInfoRecord(Integer id, String tradeNo, String merchantNo, String platform, BigInteger tradeAmount, String ip, Timestamp submitTime, Timestamp createTime, Timestamp doneTime, Timestamp updateTime, String tradeStatus, String tradeErrcode, String tradeErrmsg, String seqId, String qrCode, String notifyStatus, String deviceId, String merchantTradeNo, String notifyUrl, String payeeAccountNo, String method, String appId, String qrcodeNum) {
+    public TradeInfoRecord(Integer id, String tradeNo, String merchantNo, String platform, BigInteger tradeAmount, String ip, LocalDateTime submitTime, LocalDateTime createTime, LocalDateTime doneTime, LocalDateTime updateTime, String tradeStatus, String tradeErrcode, String tradeErrmsg, String seqId, String qrCode, String notifyStatus, String deviceId, String merchantTradeNo, String notifyUrl, String payeeAccountNo, String method, String appId, String qrcodeNum) {
         super(TradeInfo.TRADE_INFO);
 
         set(0, id);

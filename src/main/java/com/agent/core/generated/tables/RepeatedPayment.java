@@ -7,14 +7,21 @@ package com.agent.core.generated.tables;
 import com.agent.core.generated.IfpayCcpay;
 import com.agent.core.generated.Keys;
 import com.agent.core.generated.tables.records.RepeatedPaymentRecord;
-import org.jooq.*;
-import org.jooq.impl.TableImpl;
 
-import javax.annotation.Generated;
 import java.math.BigInteger;
-import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
+
+import javax.annotation.Generated;
+
+import org.jooq.Field;
+import org.jooq.Identity;
+import org.jooq.Schema;
+import org.jooq.Table;
+import org.jooq.TableField;
+import org.jooq.UniqueKey;
+import org.jooq.impl.TableImpl;
 
 
 /**
@@ -30,7 +37,7 @@ import java.util.List;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class RepeatedPayment extends TableImpl<RepeatedPaymentRecord> {
 
-    private static final long serialVersionUID = -439195706;
+    private static final long serialVersionUID = -1744205365;
 
     /**
      * The reference instance of <code>ifpay_ccpay.repeated_payment</code>
@@ -73,7 +80,7 @@ public class RepeatedPayment extends TableImpl<RepeatedPaymentRecord> {
     /**
      * The column <code>ifpay_ccpay.repeated_payment.CREATE_TIME</code>. 创建时间
      */
-    public final TableField<RepeatedPaymentRecord, Timestamp> CREATE_TIME = createField("CREATE_TIME", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.inline("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "创建时间");
+    public final TableField<RepeatedPaymentRecord, LocalDateTime> CREATE_TIME = createField("CREATE_TIME", org.jooq.impl.SQLDataType.LOCALDATETIME.nullable(false).defaultValue(org.jooq.impl.DSL.inline("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.LOCALDATETIME)), this, "创建时间");
 
     /**
      * The column <code>ifpay_ccpay.repeated_payment.SEQ_ID</code>. 上游订单号

@@ -7,14 +7,21 @@ package com.agent.core.generated.tables;
 import com.agent.core.generated.IfpayCcpay;
 import com.agent.core.generated.Keys;
 import com.agent.core.generated.tables.records.MerchantRecord;
-import org.jooq.*;
-import org.jooq.impl.TableImpl;
-import org.jooq.types.ULong;
 
-import javax.annotation.Generated;
-import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
+
+import javax.annotation.Generated;
+
+import org.jooq.Field;
+import org.jooq.Identity;
+import org.jooq.Schema;
+import org.jooq.Table;
+import org.jooq.TableField;
+import org.jooq.UniqueKey;
+import org.jooq.impl.TableImpl;
+import org.jooq.types.ULong;
 
 
 /**
@@ -30,7 +37,7 @@ import java.util.List;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Merchant extends TableImpl<MerchantRecord> {
 
-    private static final long serialVersionUID = -551382403;
+    private static final long serialVersionUID = 1862337902;
 
     /**
      * The reference instance of <code>ifpay_ccpay.merchant</code>
@@ -73,12 +80,12 @@ public class Merchant extends TableImpl<MerchantRecord> {
     /**
      * The column <code>ifpay_ccpay.merchant.CREATED_TIME</code>. 创建时间
      */
-    public final TableField<MerchantRecord, Timestamp> CREATED_TIME = createField("CREATED_TIME", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.inline("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "创建时间");
+    public final TableField<MerchantRecord, LocalDateTime> CREATED_TIME = createField("CREATED_TIME", org.jooq.impl.SQLDataType.LOCALDATETIME.nullable(false).defaultValue(org.jooq.impl.DSL.inline("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.LOCALDATETIME)), this, "创建时间");
 
     /**
      * The column <code>ifpay_ccpay.merchant.UPDATE_TIME</code>. 修改时间
      */
-    public final TableField<MerchantRecord, Timestamp> UPDATE_TIME = createField("UPDATE_TIME", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0000-00-00 00:00:00", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "修改时间");
+    public final TableField<MerchantRecord, LocalDateTime> UPDATE_TIME = createField("UPDATE_TIME", org.jooq.impl.SQLDataType.LOCALDATETIME.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0000-00-00 00:00:00", org.jooq.impl.SQLDataType.LOCALDATETIME)), this, "修改时间");
 
     /**
      * The column <code>ifpay_ccpay.merchant.SIGN_KEY</code>. 密钥

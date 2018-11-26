@@ -7,14 +7,21 @@ package com.agent.core.generated.tables;
 import com.agent.core.generated.IfpayCcpay;
 import com.agent.core.generated.Keys;
 import com.agent.core.generated.tables.records.TradeInfoRecord;
-import org.jooq.*;
-import org.jooq.impl.TableImpl;
 
-import javax.annotation.Generated;
 import java.math.BigInteger;
-import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
+
+import javax.annotation.Generated;
+
+import org.jooq.Field;
+import org.jooq.Identity;
+import org.jooq.Schema;
+import org.jooq.Table;
+import org.jooq.TableField;
+import org.jooq.UniqueKey;
+import org.jooq.impl.TableImpl;
 
 
 /**
@@ -30,7 +37,7 @@ import java.util.List;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class TradeInfo extends TableImpl<TradeInfoRecord> {
 
-    private static final long serialVersionUID = -256137151;
+    private static final long serialVersionUID = 1318852864;
 
     /**
      * The reference instance of <code>ifpay_ccpay.trade_info</code>
@@ -78,22 +85,22 @@ public class TradeInfo extends TableImpl<TradeInfoRecord> {
     /**
      * The column <code>ifpay_ccpay.trade_info.SUBMIT_TIME</code>. 提交时间
      */
-    public final TableField<TradeInfoRecord, Timestamp> SUBMIT_TIME = createField("SUBMIT_TIME", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false), this, "提交时间");
+    public final TableField<TradeInfoRecord, LocalDateTime> SUBMIT_TIME = createField("SUBMIT_TIME", org.jooq.impl.SQLDataType.LOCALDATETIME.nullable(false), this, "提交时间");
 
     /**
      * The column <code>ifpay_ccpay.trade_info.CREATE_TIME</code>. 创建时间
      */
-    public final TableField<TradeInfoRecord, Timestamp> CREATE_TIME = createField("CREATE_TIME", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false), this, "创建时间");
+    public final TableField<TradeInfoRecord, LocalDateTime> CREATE_TIME = createField("CREATE_TIME", org.jooq.impl.SQLDataType.LOCALDATETIME.nullable(false), this, "创建时间");
 
     /**
      * The column <code>ifpay_ccpay.trade_info.DONE_TIME</code>. 交易完成时间
      */
-    public final TableField<TradeInfoRecord, Timestamp> DONE_TIME = createField("DONE_TIME", org.jooq.impl.SQLDataType.TIMESTAMP, this, "交易完成时间");
+    public final TableField<TradeInfoRecord, LocalDateTime> DONE_TIME = createField("DONE_TIME", org.jooq.impl.SQLDataType.LOCALDATETIME, this, "交易完成时间");
 
     /**
      * The column <code>ifpay_ccpay.trade_info.UPDATE_TIME</code>. 最近更新时间
      */
-    public final TableField<TradeInfoRecord, Timestamp> UPDATE_TIME = createField("UPDATE_TIME", org.jooq.impl.SQLDataType.TIMESTAMP, this, "最近更新时间");
+    public final TableField<TradeInfoRecord, LocalDateTime> UPDATE_TIME = createField("UPDATE_TIME", org.jooq.impl.SQLDataType.LOCALDATETIME, this, "最近更新时间");
 
     /**
      * The column <code>ifpay_ccpay.trade_info.TRADE_STATUS</code>. 交易状态

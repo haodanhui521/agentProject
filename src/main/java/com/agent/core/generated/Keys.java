@@ -4,14 +4,31 @@
 package com.agent.core.generated;
 
 
-import com.agent.core.generated.tables.*;
-import com.agent.core.generated.tables.records.*;
+import com.agent.core.generated.tables.AppRelease;
+import com.agent.core.generated.tables.Machine;
+import com.agent.core.generated.tables.Merchant;
+import com.agent.core.generated.tables.MerchantPlatform;
+import com.agent.core.generated.tables.PayeeAccount;
+import com.agent.core.generated.tables.Platform;
+import com.agent.core.generated.tables.QrcodeUrl;
+import com.agent.core.generated.tables.RepeatedPayment;
+import com.agent.core.generated.tables.TradeInfo;
+import com.agent.core.generated.tables.records.AppReleaseRecord;
+import com.agent.core.generated.tables.records.MachineRecord;
+import com.agent.core.generated.tables.records.MerchantPlatformRecord;
+import com.agent.core.generated.tables.records.MerchantRecord;
+import com.agent.core.generated.tables.records.PayeeAccountRecord;
+import com.agent.core.generated.tables.records.PlatformRecord;
+import com.agent.core.generated.tables.records.QrcodeUrlRecord;
+import com.agent.core.generated.tables.records.RepeatedPaymentRecord;
+import com.agent.core.generated.tables.records.TradeInfoRecord;
+
+import javax.annotation.Generated;
+
 import org.jooq.Identity;
 import org.jooq.UniqueKey;
 import org.jooq.impl.AbstractKeys;
 import org.jooq.types.ULong;
-
-import javax.annotation.Generated;
 
 
 /**

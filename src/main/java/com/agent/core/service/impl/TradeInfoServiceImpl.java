@@ -3,10 +3,9 @@ package com.agent.core.service.impl;
 import com.agent.core.generated.tables.TradeInfo;
 import com.agent.core.generated.tables.records.TradeInfoRecord;
 import com.agent.core.service.TradeInfoService;
+import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
 import org.jooq.DSLContext;
-import org.jooq.Record;
-import org.jooq.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,9 +21,15 @@ public class TradeInfoServiceImpl implements TradeInfoService {
 
     TradeInfo t = TradeInfo.TRADE_INFO;
 
+
+
     @Override
-    public List<TradeInfoRecord> selectAll() {
-        List<TradeInfoRecord> tradeInfoRecordList = dslContext.select(t.APP_ID,t.MERCHANT_NO).from(t).fetch().into(TradeInfoRecord.class);
+    public List<com.agent.core.pojos.TradeInfo> selectAll() {
+        com.agent.core.pojos.TradeInfo tradeInfo = new com.agent.core.pojos.TradeInfo();
+        List<com.agent.core.pojos.TradeInfo> tradeInfoRecordList = dslContext.select().from(t).offset(1).limit(10).fetchInto(tradeInfo.getClass());
+        for(com.agent.core.pojos.TradeInfo tradeInfos:tradeInfoRecordList){
+            System.out.println(JSON.toJSONString(tradeInfos));
+        }
         return tradeInfoRecordList;
     }
 }

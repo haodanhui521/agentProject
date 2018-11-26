@@ -35,9 +35,20 @@
             <excludes></excludes>
         </database>
 
+        <generate>
+            <!--生成dao和pojo-->
+            <daos>true</daos>
+            <pojos>true</pojos>
+            <!--把数据库时间类型映射到java 8时间类型-->
+            <javaTimeTypes>true</javaTimeTypes>
+            <!--<interfaces>true</interfaces>-->
+            <!--不在生成的代码中添加spring注释，比如@Repository-->
+            <springAnnotations>false</springAnnotations>
+        </generate>
+
         <target>
             <!-- The destination package of your generated classes (within the destination directory) -->
-            <packageName>D:\agentProject\agentProject\agentCoreService\src\main\java\com\agent\core\generated</packageName>
+            <packageName>com.agent.core.generated</packageName>
 
             <!-- The destination directory of your generated classes. Using Maven directory layout here -->
             <directory>D:\agentProject\agentProject\agentCoreService\src\main\java</directory>

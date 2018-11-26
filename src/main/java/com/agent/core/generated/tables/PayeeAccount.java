@@ -7,15 +7,22 @@ package com.agent.core.generated.tables;
 import com.agent.core.generated.IfpayCcpay;
 import com.agent.core.generated.Keys;
 import com.agent.core.generated.tables.records.PayeeAccountRecord;
-import org.jooq.*;
-import org.jooq.impl.TableImpl;
-import org.jooq.types.ULong;
 
-import javax.annotation.Generated;
 import java.math.BigInteger;
-import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
+
+import javax.annotation.Generated;
+
+import org.jooq.Field;
+import org.jooq.Identity;
+import org.jooq.Schema;
+import org.jooq.Table;
+import org.jooq.TableField;
+import org.jooq.UniqueKey;
+import org.jooq.impl.TableImpl;
+import org.jooq.types.ULong;
 
 
 /**
@@ -31,7 +38,7 @@ import java.util.List;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class PayeeAccount extends TableImpl<PayeeAccountRecord> {
 
-    private static final long serialVersionUID = -215099979;
+    private static final long serialVersionUID = 329622388;
 
     /**
      * The reference instance of <code>ifpay_ccpay.payee_account</code>
@@ -89,7 +96,7 @@ public class PayeeAccount extends TableImpl<PayeeAccountRecord> {
     /**
      * The column <code>ifpay_ccpay.payee_account.LAST_TRADE_DATE</code>. 上一次交易时间
      */
-    public final TableField<PayeeAccountRecord, Timestamp> LAST_TRADE_DATE = createField("LAST_TRADE_DATE", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0000-00-00 00:00:00", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "上一次交易时间");
+    public final TableField<PayeeAccountRecord, LocalDateTime> LAST_TRADE_DATE = createField("LAST_TRADE_DATE", org.jooq.impl.SQLDataType.LOCALDATETIME.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0000-00-00 00:00:00", org.jooq.impl.SQLDataType.LOCALDATETIME)), this, "上一次交易时间");
 
     /**
      * The column <code>ifpay_ccpay.payee_account.LOCALE_IP</code>. 上账服务器IP
@@ -109,12 +116,12 @@ public class PayeeAccount extends TableImpl<PayeeAccountRecord> {
     /**
      * The column <code>ifpay_ccpay.payee_account.CREATED_DATE</code>. 创建时间
      */
-    public final TableField<PayeeAccountRecord, Timestamp> CREATED_DATE = createField("CREATED_DATE", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.inline("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "创建时间");
+    public final TableField<PayeeAccountRecord, LocalDateTime> CREATED_DATE = createField("CREATED_DATE", org.jooq.impl.SQLDataType.LOCALDATETIME.nullable(false).defaultValue(org.jooq.impl.DSL.inline("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.LOCALDATETIME)), this, "创建时间");
 
     /**
      * The column <code>ifpay_ccpay.payee_account.UPDATE_DATE</code>. 修改时间
      */
-    public final TableField<PayeeAccountRecord, Timestamp> UPDATE_DATE = createField("UPDATE_DATE", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0000-00-00 00:00:00", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "修改时间");
+    public final TableField<PayeeAccountRecord, LocalDateTime> UPDATE_DATE = createField("UPDATE_DATE", org.jooq.impl.SQLDataType.LOCALDATETIME.nullable(false).defaultValue(org.jooq.impl.DSL.inline("0000-00-00 00:00:00", org.jooq.impl.SQLDataType.LOCALDATETIME)), this, "修改时间");
 
     /**
      * The column <code>ifpay_ccpay.payee_account.unpay_limit</code>. 未付款数上限

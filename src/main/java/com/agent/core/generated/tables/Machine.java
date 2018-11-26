@@ -7,14 +7,21 @@ package com.agent.core.generated.tables;
 import com.agent.core.generated.IfpayCcpay;
 import com.agent.core.generated.Keys;
 import com.agent.core.generated.tables.records.MachineRecord;
-import org.jooq.*;
-import org.jooq.impl.TableImpl;
-import org.jooq.types.ULong;
 
-import javax.annotation.Generated;
-import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
+
+import javax.annotation.Generated;
+
+import org.jooq.Field;
+import org.jooq.Identity;
+import org.jooq.Schema;
+import org.jooq.Table;
+import org.jooq.TableField;
+import org.jooq.UniqueKey;
+import org.jooq.impl.TableImpl;
+import org.jooq.types.ULong;
 
 
 /**
@@ -30,7 +37,7 @@ import java.util.List;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Machine extends TableImpl<MachineRecord> {
 
-    private static final long serialVersionUID = -1387256848;
+    private static final long serialVersionUID = 1453825291;
 
     /**
      * The reference instance of <code>ifpay_ccpay.machine</code>
@@ -108,12 +115,12 @@ public class Machine extends TableImpl<MachineRecord> {
     /**
      * The column <code>ifpay_ccpay.machine.CREATED_DATE</code>. 创建时间
      */
-    public final TableField<MachineRecord, Timestamp> CREATED_DATE = createField("CREATED_DATE", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.inline("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "创建时间");
+    public final TableField<MachineRecord, LocalDateTime> CREATED_DATE = createField("CREATED_DATE", org.jooq.impl.SQLDataType.LOCALDATETIME.nullable(false).defaultValue(org.jooq.impl.DSL.inline("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.LOCALDATETIME)), this, "创建时间");
 
     /**
      * The column <code>ifpay_ccpay.machine.UPDATE_DATE</code>. 修改时间
      */
-    public final TableField<MachineRecord, Timestamp> UPDATE_DATE = createField("UPDATE_DATE", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.inline("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "修改时间");
+    public final TableField<MachineRecord, LocalDateTime> UPDATE_DATE = createField("UPDATE_DATE", org.jooq.impl.SQLDataType.LOCALDATETIME.nullable(false).defaultValue(org.jooq.impl.DSL.inline("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.LOCALDATETIME)), this, "修改时间");
 
     /**
      * The column <code>ifpay_ccpay.machine.app_id</code>.

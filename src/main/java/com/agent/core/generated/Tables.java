@@ -4,7 +4,15 @@
 package com.agent.core.generated;
 
 
-import com.agent.core.generated.tables.*;
+import com.agent.core.generated.tables.AppRelease;
+import com.agent.core.generated.tables.Machine;
+import com.agent.core.generated.tables.Merchant;
+import com.agent.core.generated.tables.MerchantPlatform;
+import com.agent.core.generated.tables.PayeeAccount;
+import com.agent.core.generated.tables.Platform;
+import com.agent.core.generated.tables.QrcodeUrl;
+import com.agent.core.generated.tables.RepeatedPayment;
+import com.agent.core.generated.tables.TradeInfo;
 
 import javax.annotation.Generated;
 
@@ -25,45 +33,45 @@ public class Tables {
     /**
      * The table <code>ifpay_ccpay.app_release</code>.
      */
-    public static final AppRelease APP_RELEASE = AppRelease.APP_RELEASE;
+    public static final AppRelease APP_RELEASE = com.agent.core.generated.tables.AppRelease.APP_RELEASE;
 
     /**
      * 设备表
      */
-    public static final Machine MACHINE = Machine.MACHINE;
+    public static final Machine MACHINE = com.agent.core.generated.tables.Machine.MACHINE;
 
     /**
      * 商户表
      */
-    public static final Merchant MERCHANT = Merchant.MERCHANT;
+    public static final Merchant MERCHANT = com.agent.core.generated.tables.Merchant.MERCHANT;
 
     /**
      * 商户平台关系表
      */
-    public static final MerchantPlatform MERCHANT_PLATFORM = MerchantPlatform.MERCHANT_PLATFORM;
+    public static final MerchantPlatform MERCHANT_PLATFORM = com.agent.core.generated.tables.MerchantPlatform.MERCHANT_PLATFORM;
 
     /**
      * 收款账户表
      */
-    public static final PayeeAccount PAYEE_ACCOUNT = PayeeAccount.PAYEE_ACCOUNT;
+    public static final PayeeAccount PAYEE_ACCOUNT = com.agent.core.generated.tables.PayeeAccount.PAYEE_ACCOUNT;
 
     /**
      * 平台表
      */
-    public static final Platform PLATFORM = Platform.PLATFORM;
+    public static final Platform PLATFORM = com.agent.core.generated.tables.Platform.PLATFORM;
 
     /**
      * The table <code>ifpay_ccpay.qrcode_url</code>.
      */
-    public static final QrcodeUrl QRCODE_URL = QrcodeUrl.QRCODE_URL;
+    public static final QrcodeUrl QRCODE_URL = com.agent.core.generated.tables.QrcodeUrl.QRCODE_URL;
 
     /**
      * 重复付款订单
      */
-    public static final RepeatedPayment REPEATED_PAYMENT = RepeatedPayment.REPEATED_PAYMENT;
+    public static final RepeatedPayment REPEATED_PAYMENT = com.agent.core.generated.tables.RepeatedPayment.REPEATED_PAYMENT;
 
     /**
      * 交易订单表
      */
-    public static final TradeInfo TRADE_INFO = TradeInfo.TRADE_INFO;
+    public static final TradeInfo TRADE_INFO = com.agent.core.generated.tables.TradeInfo.TRADE_INFO;
 }

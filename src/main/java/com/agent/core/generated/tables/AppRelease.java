@@ -7,14 +7,21 @@ package com.agent.core.generated.tables;
 import com.agent.core.generated.IfpayCcpay;
 import com.agent.core.generated.Keys;
 import com.agent.core.generated.tables.records.AppReleaseRecord;
-import org.jooq.*;
-import org.jooq.impl.TableImpl;
-import org.jooq.types.ULong;
 
-import javax.annotation.Generated;
-import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
+
+import javax.annotation.Generated;
+
+import org.jooq.Field;
+import org.jooq.Identity;
+import org.jooq.Schema;
+import org.jooq.Table;
+import org.jooq.TableField;
+import org.jooq.UniqueKey;
+import org.jooq.impl.TableImpl;
+import org.jooq.types.ULong;
 
 
 /**
@@ -30,7 +37,7 @@ import java.util.List;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class AppRelease extends TableImpl<AppReleaseRecord> {
 
-    private static final long serialVersionUID = -595296144;
+    private static final long serialVersionUID = -383802971;
 
     /**
      * The reference instance of <code>ifpay_ccpay.app_release</code>
@@ -73,7 +80,7 @@ public class AppRelease extends TableImpl<AppReleaseRecord> {
     /**
      * The column <code>ifpay_ccpay.app_release.EFFECT_TIME</code>. 生效时间
      */
-    public final TableField<AppReleaseRecord, Timestamp> EFFECT_TIME = createField("EFFECT_TIME", org.jooq.impl.SQLDataType.TIMESTAMP, this, "生效时间");
+    public final TableField<AppReleaseRecord, LocalDateTime> EFFECT_TIME = createField("EFFECT_TIME", org.jooq.impl.SQLDataType.LOCALDATETIME, this, "生效时间");
 
     /**
      * The column <code>ifpay_ccpay.app_release.UPDATE_DESC</code>. 更新描述
@@ -81,19 +88,19 @@ public class AppRelease extends TableImpl<AppReleaseRecord> {
     public final TableField<AppReleaseRecord, String> UPDATE_DESC = createField("UPDATE_DESC", org.jooq.impl.SQLDataType.CLOB, this, "更新描述");
 
     /**
-     * The column <code>ifpay_ccpay.app_release.LIMIT_VERSION</code>. 最小可用版本
+     * The column <code>ifpay_ccpay.app_release.LIMIT_VERSION</code>. 强制更新版本
      */
-    public final TableField<AppReleaseRecord, String> LIMIT_VERSION = createField("LIMIT_VERSION", org.jooq.impl.SQLDataType.VARCHAR.length(32), this, "最小可用版本");
+    public final TableField<AppReleaseRecord, String> LIMIT_VERSION = createField("LIMIT_VERSION", org.jooq.impl.SQLDataType.VARCHAR.length(32), this, "强制更新版本");
 
     /**
      * The column <code>ifpay_ccpay.app_release.CREATED_TIME</code>. 创建时间
      */
-    public final TableField<AppReleaseRecord, Timestamp> CREATED_TIME = createField("CREATED_TIME", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.inline("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "创建时间");
+    public final TableField<AppReleaseRecord, LocalDateTime> CREATED_TIME = createField("CREATED_TIME", org.jooq.impl.SQLDataType.LOCALDATETIME.nullable(false).defaultValue(org.jooq.impl.DSL.inline("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.LOCALDATETIME)), this, "创建时间");
 
     /**
      * The column <code>ifpay_ccpay.app_release.UPDATE_TIME</code>. 修改时间
      */
-    public final TableField<AppReleaseRecord, Timestamp> UPDATE_TIME = createField("UPDATE_TIME", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.inline("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "修改时间");
+    public final TableField<AppReleaseRecord, LocalDateTime> UPDATE_TIME = createField("UPDATE_TIME", org.jooq.impl.SQLDataType.LOCALDATETIME.nullable(false).defaultValue(org.jooq.impl.DSL.inline("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.LOCALDATETIME)), this, "修改时间");
 
     /**
      * The column <code>ifpay_ccpay.app_release.CREATOR</code>. 创建人

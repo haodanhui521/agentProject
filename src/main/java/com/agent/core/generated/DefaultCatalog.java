@@ -4,13 +4,14 @@
 package com.agent.core.generated;
 
 
-import org.jooq.Schema;
-import org.jooq.impl.CatalogImpl;
-
-import javax.annotation.Generated;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import javax.annotation.Generated;
+
+import org.jooq.Schema;
+import org.jooq.impl.CatalogImpl;
 
 
 /**
@@ -26,7 +27,7 @@ import java.util.List;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class DefaultCatalog extends CatalogImpl {
 
-    private static final long serialVersionUID = 81919963;
+    private static final long serialVersionUID = 586113595;
 
     /**
      * The reference instance of <code></code>
@@ -36,7 +37,7 @@ public class DefaultCatalog extends CatalogImpl {
     /**
      * The schema <code>ifpay_ccpay</code>.
      */
-    public final IfpayCcpay IFPAY_CCPAY = IfpayCcpay.IFPAY_CCPAY;
+    public final IfpayCcpay IFPAY_CCPAY = com.agent.core.generated.IfpayCcpay.IFPAY_CCPAY;
 
     /**
      * No further instances allowed

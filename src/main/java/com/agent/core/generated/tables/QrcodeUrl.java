@@ -7,14 +7,21 @@ package com.agent.core.generated.tables;
 import com.agent.core.generated.IfpayCcpay;
 import com.agent.core.generated.Keys;
 import com.agent.core.generated.tables.records.QrcodeUrlRecord;
-import org.jooq.*;
-import org.jooq.impl.TableImpl;
 
-import javax.annotation.Generated;
 import java.math.BigInteger;
-import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
+
+import javax.annotation.Generated;
+
+import org.jooq.Field;
+import org.jooq.Identity;
+import org.jooq.Schema;
+import org.jooq.Table;
+import org.jooq.TableField;
+import org.jooq.UniqueKey;
+import org.jooq.impl.TableImpl;
 
 
 /**
@@ -30,7 +37,7 @@ import java.util.List;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class QrcodeUrl extends TableImpl<QrcodeUrlRecord> {
 
-    private static final long serialVersionUID = 25134750;
+    private static final long serialVersionUID = 1640442813;
 
     /**
      * The reference instance of <code>ifpay_ccpay.qrcode_url</code>
@@ -93,27 +100,27 @@ public class QrcodeUrl extends TableImpl<QrcodeUrlRecord> {
     /**
      * The column <code>ifpay_ccpay.qrcode_url.EXPIRE_DATE</code>. 二维码失效时间
      */
-    public final TableField<QrcodeUrlRecord, Timestamp> EXPIRE_DATE = createField("EXPIRE_DATE", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.inline("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "二维码失效时间");
+    public final TableField<QrcodeUrlRecord, LocalDateTime> EXPIRE_DATE = createField("EXPIRE_DATE", org.jooq.impl.SQLDataType.LOCALDATETIME.nullable(false).defaultValue(org.jooq.impl.DSL.inline("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.LOCALDATETIME)), this, "二维码失效时间");
 
     /**
      * The column <code>ifpay_ccpay.qrcode_url.LAST_DATE</code>. 上次使用时间
      */
-    public final TableField<QrcodeUrlRecord, Timestamp> LAST_DATE = createField("LAST_DATE", org.jooq.impl.SQLDataType.TIMESTAMP, this, "上次使用时间");
+    public final TableField<QrcodeUrlRecord, LocalDateTime> LAST_DATE = createField("LAST_DATE", org.jooq.impl.SQLDataType.LOCALDATETIME, this, "上次使用时间");
 
     /**
      * The column <code>ifpay_ccpay.qrcode_url.NEXT_DATE</code>. 下次使用时间
      */
-    public final TableField<QrcodeUrlRecord, Timestamp> NEXT_DATE = createField("NEXT_DATE", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.inline("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "下次使用时间");
+    public final TableField<QrcodeUrlRecord, LocalDateTime> NEXT_DATE = createField("NEXT_DATE", org.jooq.impl.SQLDataType.LOCALDATETIME.nullable(false).defaultValue(org.jooq.impl.DSL.inline("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.LOCALDATETIME)), this, "下次使用时间");
 
     /**
      * The column <code>ifpay_ccpay.qrcode_url.CREATED_DATE</code>. 创建时间
      */
-    public final TableField<QrcodeUrlRecord, Timestamp> CREATED_DATE = createField("CREATED_DATE", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.inline("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "创建时间");
+    public final TableField<QrcodeUrlRecord, LocalDateTime> CREATED_DATE = createField("CREATED_DATE", org.jooq.impl.SQLDataType.LOCALDATETIME.nullable(false).defaultValue(org.jooq.impl.DSL.inline("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.LOCALDATETIME)), this, "创建时间");
 
     /**
      * The column <code>ifpay_ccpay.qrcode_url.UPDATE_DATE</code>. 更新时间
      */
-    public final TableField<QrcodeUrlRecord, Timestamp> UPDATE_DATE = createField("UPDATE_DATE", org.jooq.impl.SQLDataType.TIMESTAMP.nullable(false).defaultValue(org.jooq.impl.DSL.inline("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.TIMESTAMP)), this, "更新时间");
+    public final TableField<QrcodeUrlRecord, LocalDateTime> UPDATE_DATE = createField("UPDATE_DATE", org.jooq.impl.SQLDataType.LOCALDATETIME.nullable(false).defaultValue(org.jooq.impl.DSL.inline("CURRENT_TIMESTAMP", org.jooq.impl.SQLDataType.LOCALDATETIME)), this, "更新时间");
 
     /**
      * Create a <code>ifpay_ccpay.qrcode_url</code> table reference

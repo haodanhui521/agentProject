@@ -4,15 +4,25 @@
 package com.agent.core.generated;
 
 
-import com.agent.core.generated.tables.*;
-import org.jooq.Catalog;
-import org.jooq.Table;
-import org.jooq.impl.SchemaImpl;
+import com.agent.core.generated.tables.AppRelease;
+import com.agent.core.generated.tables.Machine;
+import com.agent.core.generated.tables.Merchant;
+import com.agent.core.generated.tables.MerchantPlatform;
+import com.agent.core.generated.tables.PayeeAccount;
+import com.agent.core.generated.tables.Platform;
+import com.agent.core.generated.tables.QrcodeUrl;
+import com.agent.core.generated.tables.RepeatedPayment;
+import com.agent.core.generated.tables.TradeInfo;
 
-import javax.annotation.Generated;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import javax.annotation.Generated;
+
+import org.jooq.Catalog;
+import org.jooq.Table;
+import org.jooq.impl.SchemaImpl;
 
 
 /**
@@ -28,7 +38,7 @@ import java.util.List;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class IfpayCcpay extends SchemaImpl {
 
-    private static final long serialVersionUID = 40674360;
+    private static final long serialVersionUID = -1780570701;
 
     /**
      * The reference instance of <code>ifpay_ccpay</code>
@@ -38,47 +48,48 @@ public class IfpayCcpay extends SchemaImpl {
     /**
      * The table <code>ifpay_ccpay.app_release</code>.
      */
-    public final AppRelease APP_RELEASE = AppRelease.APP_RELEASE;
+    public final AppRelease APP_RELEASE = com.agent.core.generated.tables.AppRelease.APP_RELEASE;
 
     /**
      * 设备表
      */
-    public final Machine MACHINE = Machine.MACHINE;
+    public final Machine MACHINE = com.agent.core.generated.tables.Machine.MACHINE;
 
     /**
      * 商户表
      */
-    public final Merchant MERCHANT = Merchant.MERCHANT;
+    public final Merchant MERCHANT = com.agent.core.generated.tables.Merchant.MERCHANT;
 
     /**
      * 商户平台关系表
      */
-    public final MerchantPlatform MERCHANT_PLATFORM = MerchantPlatform.MERCHANT_PLATFORM;
+    public final MerchantPlatform MERCHANT_PLATFORM = com.agent.core.generated.tables.MerchantPlatform.MERCHANT_PLATFORM;
+
 
     /**
      * 收款账户表
      */
-    public final PayeeAccount PAYEE_ACCOUNT = PayeeAccount.PAYEE_ACCOUNT;
+    public final PayeeAccount PAYEE_ACCOUNT = com.agent.core.generated.tables.PayeeAccount.PAYEE_ACCOUNT;
 
     /**
      * 平台表
      */
-    public final Platform PLATFORM = Platform.PLATFORM;
+    public final Platform PLATFORM = com.agent.core.generated.tables.Platform.PLATFORM;
 
     /**
      * The table <code>ifpay_ccpay.qrcode_url</code>.
      */
-    public final QrcodeUrl QRCODE_URL = QrcodeUrl.QRCODE_URL;
+    public final QrcodeUrl QRCODE_URL = com.agent.core.generated.tables.QrcodeUrl.QRCODE_URL;
 
     /**
      * 重复付款订单
      */
-    public final RepeatedPayment REPEATED_PAYMENT = RepeatedPayment.REPEATED_PAYMENT;
+    public final RepeatedPayment REPEATED_PAYMENT = com.agent.core.generated.tables.RepeatedPayment.REPEATED_PAYMENT;
 
     /**
      * 交易订单表
      */
-    public final TradeInfo TRADE_INFO = TradeInfo.TRADE_INFO;
+    public final TradeInfo TRADE_INFO = com.agent.core.generated.tables.TradeInfo.TRADE_INFO;
 
     /**
      * No further instances allowed

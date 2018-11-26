@@ -1,7 +1,6 @@
 package com.agent.core.controller;
 
 
-import com.agent.core.generated.tables.TradeInfo;
 import com.agent.core.generated.tables.records.TradeInfoRecord;
 import com.agent.core.response.Result;
 import com.agent.core.service.TradeInfoService;
@@ -21,8 +20,8 @@ public class TestController {
     private TradeInfoService tradeInfoService;
 
     @RequestMapping("/all")
-    public Result<List<TradeInfoRecord>> getTradeInfo(){
-        List<TradeInfoRecord> tradeInfoList = tradeInfoService.selectAll();
+    public Result<List<com.agent.core.pojos.TradeInfo>> getTradeInfo(){
+        List<com.agent.core.pojos.TradeInfo> tradeInfoList = tradeInfoService.selectAll();
         return Result.ofSuccess(tradeInfoList);
     }
 }
