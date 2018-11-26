@@ -37,8 +37,8 @@ public class Org implements Serializable {
     private String    email;
     private String    website;
     private String    type;
-    private Short     level;
-    private Short     maxLevel;
+    private Integer     level;
+    private Integer     maxLevel;
     private String    creatorCreateType;
     private String    creatorName;
     private Date createdAt;
@@ -82,8 +82,8 @@ public class Org implements Serializable {
         String    email,
         String    website,
         String    type,
-        Short     level,
-        Short     maxLevel,
+        Integer     level,
+        Integer     maxLevel,
         String    creatorCreateType,
         String    creatorName,
         Date createdAt,
@@ -207,19 +207,19 @@ public class Org implements Serializable {
         this.type = type;
     }
 
-    public Short getLevel() {
-        return this.level;
+    public Integer getLevel() {
+        return level;
     }
 
-    public void setLevel(Short level) {
+    public void setLevel(Integer level) {
         this.level = level;
     }
 
-    public Short getMaxLevel() {
-        return this.maxLevel;
+    public Integer getMaxLevel() {
+        return maxLevel;
     }
 
-    public void setMaxLevel(Short maxLevel) {
+    public void setMaxLevel(Integer maxLevel) {
         this.maxLevel = maxLevel;
     }
 
