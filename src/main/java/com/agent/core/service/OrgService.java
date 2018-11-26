@@ -1,9 +1,9 @@
 package com.agent.core.service;
 
-import com.agent.core.pojos.Org;
+import com.agent.core.request.OrgRegisterRequest;
 
 public interface OrgService{
 
-    void registerOrg(Org org);
+    void registerOrg(OrgRegisterRequest orgRegisterRequest);
 
 }
