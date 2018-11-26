@@ -39,6 +39,8 @@ dependencies {
     compile "org.apache.commons:commons-lang3:3.8.1"
     compile "org.springframework.boot:spring-boot-starter-jooq"
     compile "com.alibaba:fastjson:1.2.51"
+    compile "commons-codec:commons-codec:1.10"
+    compile "joda-time:joda-time:2.10"
     compile "org.jooq:jooq-meta:3.9.6"
     compile "org.jooq:jooq-codegen:3.9.6"
     testImplementation('org.springframework.boot:spring-boot-starter-test')
