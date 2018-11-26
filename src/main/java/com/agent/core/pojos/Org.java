@@ -5,7 +5,7 @@ package com.agent.core.pojos;
 
 
 import java.io.Serializable;
-import java.sql.Timestamp;
+import java.util.Date;
 
 import javax.annotation.Generated;
 
@@ -41,8 +41,8 @@ public class Org implements Serializable {
     private Short     maxLevel;
     private String    creatorCreateType;
     private String    creatorName;
-    private Timestamp createdAt;
-    private Timestamp updatedAt;
+    private Date createdAt;
+    private Date updatedAt;
     private String    status;
 
     public Org() {}
@@ -86,8 +86,8 @@ public class Org implements Serializable {
         Short     maxLevel,
         String    creatorCreateType,
         String    creatorName,
-        Timestamp createdAt,
-        Timestamp updatedAt,
+        Date createdAt,
+        Date updatedAt,
         String    status
     ) {
         this.id = id;
@@ -239,19 +239,19 @@ public class Org implements Serializable {
         this.creatorName = creatorName;
     }
 
-    public Timestamp getCreatedAt() {
-        return this.createdAt;
+    public Date getCreatedAt() {
+        return createdAt;
     }
 
-    public void setCreatedAt(Timestamp createdAt) {
+    public void setCreatedAt(Date createdAt) {
         this.createdAt = createdAt;
     }
 
-    public Timestamp getUpdatedAt() {
-        return this.updatedAt;
+    public Date getUpdatedAt() {
+        return updatedAt;
     }
 
-    public void setUpdatedAt(Timestamp updatedAt) {
+    public void setUpdatedAt(Date updatedAt) {
         this.updatedAt = updatedAt;
     }
 

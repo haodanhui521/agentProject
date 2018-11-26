@@ -126,6 +126,7 @@ public class DruidConfig {
         DefaultConfiguration jooqConfiguration = new DefaultConfiguration();
         jooqConfiguration.set(connectionProvider());
         jooqConfiguration.set(executeListenerProviders);
+        jooqConfiguration.set(SQLDialect.MYSQL);
         return jooqConfiguration;
     }
 
