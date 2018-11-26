@@ -6,6 +6,7 @@ import com.alibaba.druid.support.http.StatViewServlet;
 import com.alibaba.druid.support.http.WebStatFilter;
 import org.jooq.*;
 import org.jooq.conf.Settings;
+import org.jooq.impl.DataSourceConnectionProvider;
 import org.jooq.impl.DefaultConfiguration;
 import org.jooq.impl.DefaultDSLContext;
 import org.jooq.impl.DefaultExecuteListenerProvider;
@@ -15,6 +16,7 @@ import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.datasource.TransactionAwareDataSourceProxy;
 
 import java.sql.SQLException;
 
@@ -63,6 +65,9 @@ public class DruidConfig {
     @Value("${spring.datasource.druid.useGlobalDataSourceStat:false}")
     private boolean useGlobalDataSourceStat;
 
+    @Autowired
+    private ExecuteListenerProvider[] executeListenerProviders;
+
     /**
      * Druid数据源配置
      *
@@ -107,8 +112,22 @@ public class DruidConfig {
     }
 
     @Bean
+    public DataSourceConnectionProvider connectionProvider() throws Exception {
+        return new DataSourceConnectionProvider
+                (new TransactionAwareDataSourceProxy(druidDataSource()));
+    }
+
+    @Bean
     public DefaultDSLContext dsl() throws Exception {
-        return new DefaultDSLContext(druidDataSource(),SQLDialect.MYSQL);
+        return new DefaultDSLContext(configuration());
+    }
+
+    public DefaultConfiguration configuration() throws Exception {
+        DefaultConfiguration jooqConfiguration = new DefaultConfiguration();
+        jooqConfiguration.set(connectionProvider());
+        jooqConfiguration.set(executeListenerProviders);
+
+        return jooqConfiguration;
     }
 
     @Bean
