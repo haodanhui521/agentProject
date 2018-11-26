@@ -27,7 +27,7 @@ import org.jooq.impl.CatalogImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class DefaultCatalog extends CatalogImpl {
 
-    private static final long serialVersionUID = 586113595;
+    private static final long serialVersionUID = -505676735;
 
     /**
      * The reference instance of <code></code>
@@ -35,9 +35,9 @@ public class DefaultCatalog extends CatalogImpl {
     public static final DefaultCatalog DEFAULT_CATALOG = new DefaultCatalog();
 
     /**
-     * The schema <code>ifpay_ccpay</code>.
+     * The schema <code>poppy_agent</code>.
      */
-    public final IfpayCcpay IFPAY_CCPAY = com.agent.core.generated.IfpayCcpay.IFPAY_CCPAY;
+    public final PoppyAgent POPPY_AGENT = com.agent.core.generated.PoppyAgent.POPPY_AGENT;
 
     /**
      * No further instances allowed
@@ -55,6 +55,6 @@ public class DefaultCatalog extends CatalogImpl {
 
     private final List<Schema> getSchemas0() {
         return Arrays.<Schema>asList(
-            IfpayCcpay.IFPAY_CCPAY);
+            PoppyAgent.POPPY_AGENT);
     }
 }

@@ -4,21 +4,20 @@
 package com.agent.core.generated;
 
 
-import com.agent.core.generated.tables.AppRelease;
-import com.agent.core.generated.tables.Machine;
-import com.agent.core.generated.tables.Merchant;
-import com.agent.core.generated.tables.MerchantPlatform;
-import com.agent.core.generated.tables.PayeeAccount;
-import com.agent.core.generated.tables.Platform;
-import com.agent.core.generated.tables.QrcodeUrl;
-import com.agent.core.generated.tables.RepeatedPayment;
-import com.agent.core.generated.tables.TradeInfo;
+import com.agent.core.generated.tables.CheckReview;
+import com.agent.core.generated.tables.MenuResource;
+import com.agent.core.generated.tables.OperationLog;
+import com.agent.core.generated.tables.Operator;
+import com.agent.core.generated.tables.Org;
+import com.agent.core.generated.tables.Role;
+import com.agent.core.generated.tables.RolePermission;
+import com.agent.core.generated.tables.SysConfig;
 
 import javax.annotation.Generated;
 
 
 /**
- * Convenience access to all tables in ifpay_ccpay
+ * Convenience access to all tables in poppy_agent
  */
 @Generated(
     value = {
@@ -31,47 +30,42 @@ import javax.annotation.Generated;
 public class Tables {
 
     /**
-     * The table <code>ifpay_ccpay.app_release</code>.
+     * 审核
      */
-    public static final AppRelease APP_RELEASE = com.agent.core.generated.tables.AppRelease.APP_RELEASE;
+    public static final CheckReview CHECK_REVIEW = com.agent.core.generated.tables.CheckReview.CHECK_REVIEW;
 
     /**
-     * 设备表
+     * 资源
      */
-    public static final Machine MACHINE = com.agent.core.generated.tables.Machine.MACHINE;
+    public static final MenuResource MENU_RESOURCE = com.agent.core.generated.tables.MenuResource.MENU_RESOURCE;
 
     /**
-     * 商户表
+     * 操作日志
      */
-    public static final Merchant MERCHANT = com.agent.core.generated.tables.Merchant.MERCHANT;
+    public static final OperationLog OPERATION_LOG = com.agent.core.generated.tables.OperationLog.OPERATION_LOG;
 
     /**
-     * 商户平台关系表
+     * 操作员
      */
-    public static final MerchantPlatform MERCHANT_PLATFORM = com.agent.core.generated.tables.MerchantPlatform.MERCHANT_PLATFORM;
+    public static final Operator OPERATOR = com.agent.core.generated.tables.Operator.OPERATOR;
 
     /**
-     * 收款账户表
+     * 组织
      */
-    public static final PayeeAccount PAYEE_ACCOUNT = com.agent.core.generated.tables.PayeeAccount.PAYEE_ACCOUNT;
+    public static final Org ORG = com.agent.core.generated.tables.Org.ORG;
 
     /**
-     * 平台表
+     * 角色
      */
-    public static final Platform PLATFORM = com.agent.core.generated.tables.Platform.PLATFORM;
+    public static final Role ROLE = com.agent.core.generated.tables.Role.ROLE;
 
     /**
-     * The table <code>ifpay_ccpay.qrcode_url</code>.
+     * 权限
      */
-    public static final QrcodeUrl QRCODE_URL = com.agent.core.generated.tables.QrcodeUrl.QRCODE_URL;
+    public static final RolePermission ROLE_PERMISSION = com.agent.core.generated.tables.RolePermission.ROLE_PERMISSION;
 
     /**
-     * 重复付款订单
+     * 配置
      */
-    public static final RepeatedPayment REPEATED_PAYMENT = com.agent.core.generated.tables.RepeatedPayment.REPEATED_PAYMENT;
-
-    /**
-     * 交易订单表
-     */
-    public static final TradeInfo TRADE_INFO = com.agent.core.generated.tables.TradeInfo.TRADE_INFO;
+    public static final SysConfig SYS_CONFIG = com.agent.core.generated.tables.SysConfig.SYS_CONFIG;
 }

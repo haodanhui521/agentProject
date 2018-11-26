@@ -4,35 +4,32 @@
 package com.agent.core.generated;
 
 
-import com.agent.core.generated.tables.AppRelease;
-import com.agent.core.generated.tables.Machine;
-import com.agent.core.generated.tables.Merchant;
-import com.agent.core.generated.tables.MerchantPlatform;
-import com.agent.core.generated.tables.PayeeAccount;
-import com.agent.core.generated.tables.Platform;
-import com.agent.core.generated.tables.QrcodeUrl;
-import com.agent.core.generated.tables.RepeatedPayment;
-import com.agent.core.generated.tables.TradeInfo;
-import com.agent.core.generated.tables.records.AppReleaseRecord;
-import com.agent.core.generated.tables.records.MachineRecord;
-import com.agent.core.generated.tables.records.MerchantPlatformRecord;
-import com.agent.core.generated.tables.records.MerchantRecord;
-import com.agent.core.generated.tables.records.PayeeAccountRecord;
-import com.agent.core.generated.tables.records.PlatformRecord;
-import com.agent.core.generated.tables.records.QrcodeUrlRecord;
-import com.agent.core.generated.tables.records.RepeatedPaymentRecord;
-import com.agent.core.generated.tables.records.TradeInfoRecord;
+import com.agent.core.generated.tables.CheckReview;
+import com.agent.core.generated.tables.MenuResource;
+import com.agent.core.generated.tables.OperationLog;
+import com.agent.core.generated.tables.Operator;
+import com.agent.core.generated.tables.Org;
+import com.agent.core.generated.tables.Role;
+import com.agent.core.generated.tables.RolePermission;
+import com.agent.core.generated.tables.SysConfig;
+import com.agent.core.generated.tables.records.CheckReviewRecord;
+import com.agent.core.generated.tables.records.MenuResourceRecord;
+import com.agent.core.generated.tables.records.OperationLogRecord;
+import com.agent.core.generated.tables.records.OperatorRecord;
+import com.agent.core.generated.tables.records.OrgRecord;
+import com.agent.core.generated.tables.records.RolePermissionRecord;
+import com.agent.core.generated.tables.records.RoleRecord;
+import com.agent.core.generated.tables.records.SysConfigRecord;
 
 import javax.annotation.Generated;
 
 import org.jooq.Identity;
 import org.jooq.UniqueKey;
 import org.jooq.impl.AbstractKeys;
-import org.jooq.types.ULong;
 
 
 /**
- * A class modelling foreign key relationships between tables of the <code>ifpay_ccpay</code> 
+ * A class modelling foreign key relationships between tables of the <code>poppy_agent</code> 
  * schema
  */
 @Generated(
@@ -49,37 +46,32 @@ public class Keys {
     // IDENTITY definitions
     // -------------------------------------------------------------------------
 
-    public static final Identity<AppReleaseRecord, ULong> IDENTITY_APP_RELEASE = Identities0.IDENTITY_APP_RELEASE;
-    public static final Identity<MachineRecord, ULong> IDENTITY_MACHINE = Identities0.IDENTITY_MACHINE;
-    public static final Identity<MerchantRecord, ULong> IDENTITY_MERCHANT = Identities0.IDENTITY_MERCHANT;
-    public static final Identity<MerchantPlatformRecord, ULong> IDENTITY_MERCHANT_PLATFORM = Identities0.IDENTITY_MERCHANT_PLATFORM;
-    public static final Identity<PayeeAccountRecord, ULong> IDENTITY_PAYEE_ACCOUNT = Identities0.IDENTITY_PAYEE_ACCOUNT;
-    public static final Identity<PlatformRecord, ULong> IDENTITY_PLATFORM = Identities0.IDENTITY_PLATFORM;
-    public static final Identity<QrcodeUrlRecord, Integer> IDENTITY_QRCODE_URL = Identities0.IDENTITY_QRCODE_URL;
-    public static final Identity<RepeatedPaymentRecord, Integer> IDENTITY_REPEATED_PAYMENT = Identities0.IDENTITY_REPEATED_PAYMENT;
-    public static final Identity<TradeInfoRecord, Integer> IDENTITY_TRADE_INFO = Identities0.IDENTITY_TRADE_INFO;
+    public static final Identity<CheckReviewRecord, Long> IDENTITY_CHECK_REVIEW = Identities0.IDENTITY_CHECK_REVIEW;
+    public static final Identity<MenuResourceRecord, Long> IDENTITY_MENU_RESOURCE = Identities0.IDENTITY_MENU_RESOURCE;
+    public static final Identity<OperationLogRecord, Long> IDENTITY_OPERATION_LOG = Identities0.IDENTITY_OPERATION_LOG;
+    public static final Identity<OperatorRecord, Long> IDENTITY_OPERATOR = Identities0.IDENTITY_OPERATOR;
+    public static final Identity<OrgRecord, Long> IDENTITY_ORG = Identities0.IDENTITY_ORG;
+    public static final Identity<RoleRecord, Long> IDENTITY_ROLE = Identities0.IDENTITY_ROLE;
+    public static final Identity<RolePermissionRecord, Long> IDENTITY_ROLE_PERMISSION = Identities0.IDENTITY_ROLE_PERMISSION;
+    public static final Identity<SysConfigRecord, Long> IDENTITY_SYS_CONFIG = Identities0.IDENTITY_SYS_CONFIG;
 
     // -------------------------------------------------------------------------
     // UNIQUE and PRIMARY KEY definitions
     // -------------------------------------------------------------------------
 
-    public static final UniqueKey<AppReleaseRecord> KEY_APP_RELEASE_PRIMARY = UniqueKeys0.KEY_APP_RELEASE_PRIMARY;
-    public static final UniqueKey<MachineRecord> KEY_MACHINE_PRIMARY = UniqueKeys0.KEY_MACHINE_PRIMARY;
-    public static final UniqueKey<MachineRecord> KEY_MACHINE_UNI_MACHINE_ID = UniqueKeys0.KEY_MACHINE_UNI_MACHINE_ID;
-    public static final UniqueKey<MerchantRecord> KEY_MERCHANT_PRIMARY = UniqueKeys0.KEY_MERCHANT_PRIMARY;
-    public static final UniqueKey<MerchantRecord> KEY_MERCHANT_MERCHANT_ID = UniqueKeys0.KEY_MERCHANT_MERCHANT_ID;
-    public static final UniqueKey<MerchantRecord> KEY_MERCHANT_MERCHANT_MERCHANT_NAME_IDX = UniqueKeys0.KEY_MERCHANT_MERCHANT_MERCHANT_NAME_IDX;
-    public static final UniqueKey<MerchantPlatformRecord> KEY_MERCHANT_PLATFORM_PRIMARY = UniqueKeys0.KEY_MERCHANT_PLATFORM_PRIMARY;
-    public static final UniqueKey<MerchantPlatformRecord> KEY_MERCHANT_PLATFORM_MERCHANT_PLATFORM_UNQUE_IDX = UniqueKeys0.KEY_MERCHANT_PLATFORM_MERCHANT_PLATFORM_UNQUE_IDX;
-    public static final UniqueKey<PayeeAccountRecord> KEY_PAYEE_ACCOUNT_PRIMARY = UniqueKeys0.KEY_PAYEE_ACCOUNT_PRIMARY;
-    public static final UniqueKey<PlatformRecord> KEY_PLATFORM_PRIMARY = UniqueKeys0.KEY_PLATFORM_PRIMARY;
-    public static final UniqueKey<PlatformRecord> KEY_PLATFORM_PLATFORM_CODE_IDX = UniqueKeys0.KEY_PLATFORM_PLATFORM_CODE_IDX;
-    public static final UniqueKey<QrcodeUrlRecord> KEY_QRCODE_URL_PRIMARY = UniqueKeys0.KEY_QRCODE_URL_PRIMARY;
-    public static final UniqueKey<QrcodeUrlRecord> KEY_QRCODE_URL_QRCODE_UK = UniqueKeys0.KEY_QRCODE_URL_QRCODE_UK;
-    public static final UniqueKey<RepeatedPaymentRecord> KEY_REPEATED_PAYMENT_PRIMARY = UniqueKeys0.KEY_REPEATED_PAYMENT_PRIMARY;
-    public static final UniqueKey<RepeatedPaymentRecord> KEY_REPEATED_PAYMENT_SEQ_ID = UniqueKeys0.KEY_REPEATED_PAYMENT_SEQ_ID;
-    public static final UniqueKey<TradeInfoRecord> KEY_TRADE_INFO_PRIMARY = UniqueKeys0.KEY_TRADE_INFO_PRIMARY;
-    public static final UniqueKey<TradeInfoRecord> KEY_TRADE_INFO_TRADE_NO = UniqueKeys0.KEY_TRADE_INFO_TRADE_NO;
+    public static final UniqueKey<CheckReviewRecord> KEY_CHECK_REVIEW_PRIMARY = UniqueKeys0.KEY_CHECK_REVIEW_PRIMARY;
+    public static final UniqueKey<MenuResourceRecord> KEY_MENU_RESOURCE_PRIMARY = UniqueKeys0.KEY_MENU_RESOURCE_PRIMARY;
+    public static final UniqueKey<MenuResourceRecord> KEY_MENU_RESOURCE_U_IDX_RESOURCE_CODE = UniqueKeys0.KEY_MENU_RESOURCE_U_IDX_RESOURCE_CODE;
+    public static final UniqueKey<OperationLogRecord> KEY_OPERATION_LOG_PRIMARY = UniqueKeys0.KEY_OPERATION_LOG_PRIMARY;
+    public static final UniqueKey<OperatorRecord> KEY_OPERATOR_PRIMARY = UniqueKeys0.KEY_OPERATOR_PRIMARY;
+    public static final UniqueKey<OperatorRecord> KEY_OPERATOR_U_IDX_OPERATOR_NO = UniqueKeys0.KEY_OPERATOR_U_IDX_OPERATOR_NO;
+    public static final UniqueKey<OrgRecord> KEY_ORG_PRIMARY = UniqueKeys0.KEY_ORG_PRIMARY;
+    public static final UniqueKey<RoleRecord> KEY_ROLE_PRIMARY = UniqueKeys0.KEY_ROLE_PRIMARY;
+    public static final UniqueKey<RoleRecord> KEY_ROLE_U_IDX_ROLE_NO = UniqueKeys0.KEY_ROLE_U_IDX_ROLE_NO;
+    public static final UniqueKey<RolePermissionRecord> KEY_ROLE_PERMISSION_PRIMARY = UniqueKeys0.KEY_ROLE_PERMISSION_PRIMARY;
+    public static final UniqueKey<RolePermissionRecord> KEY_ROLE_PERMISSION_U_IDX_MKEY = UniqueKeys0.KEY_ROLE_PERMISSION_U_IDX_MKEY;
+    public static final UniqueKey<SysConfigRecord> KEY_SYS_CONFIG_PRIMARY = UniqueKeys0.KEY_SYS_CONFIG_PRIMARY;
+    public static final UniqueKey<SysConfigRecord> KEY_SYS_CONFIG_IDX_CATEGORY_KEY = UniqueKeys0.KEY_SYS_CONFIG_IDX_CATEGORY_KEY;
 
     // -------------------------------------------------------------------------
     // FOREIGN KEY definitions
@@ -91,34 +83,29 @@ public class Keys {
     // -------------------------------------------------------------------------
 
     private static class Identities0 extends AbstractKeys {
-        public static Identity<AppReleaseRecord, ULong> IDENTITY_APP_RELEASE = createIdentity(AppRelease.APP_RELEASE, AppRelease.APP_RELEASE.ID);
-        public static Identity<MachineRecord, ULong> IDENTITY_MACHINE = createIdentity(Machine.MACHINE, Machine.MACHINE.ID);
-        public static Identity<MerchantRecord, ULong> IDENTITY_MERCHANT = createIdentity(Merchant.MERCHANT, Merchant.MERCHANT.ID);
-        public static Identity<MerchantPlatformRecord, ULong> IDENTITY_MERCHANT_PLATFORM = createIdentity(MerchantPlatform.MERCHANT_PLATFORM, MerchantPlatform.MERCHANT_PLATFORM.ID);
-        public static Identity<PayeeAccountRecord, ULong> IDENTITY_PAYEE_ACCOUNT = createIdentity(PayeeAccount.PAYEE_ACCOUNT, PayeeAccount.PAYEE_ACCOUNT.ID);
-        public static Identity<PlatformRecord, ULong> IDENTITY_PLATFORM = createIdentity(Platform.PLATFORM, Platform.PLATFORM.ID);
-        public static Identity<QrcodeUrlRecord, Integer> IDENTITY_QRCODE_URL = createIdentity(QrcodeUrl.QRCODE_URL, QrcodeUrl.QRCODE_URL.ID);
-        public static Identity<RepeatedPaymentRecord, Integer> IDENTITY_REPEATED_PAYMENT = createIdentity(RepeatedPayment.REPEATED_PAYMENT, RepeatedPayment.REPEATED_PAYMENT.ID);
-        public static Identity<TradeInfoRecord, Integer> IDENTITY_TRADE_INFO = createIdentity(TradeInfo.TRADE_INFO, TradeInfo.TRADE_INFO.ID);
+        public static Identity<CheckReviewRecord, Long> IDENTITY_CHECK_REVIEW = createIdentity(CheckReview.CHECK_REVIEW, CheckReview.CHECK_REVIEW.ID);
+        public static Identity<MenuResourceRecord, Long> IDENTITY_MENU_RESOURCE = createIdentity(MenuResource.MENU_RESOURCE, MenuResource.MENU_RESOURCE.ID);
+        public static Identity<OperationLogRecord, Long> IDENTITY_OPERATION_LOG = createIdentity(OperationLog.OPERATION_LOG, OperationLog.OPERATION_LOG.ID);
+        public static Identity<OperatorRecord, Long> IDENTITY_OPERATOR = createIdentity(Operator.OPERATOR, Operator.OPERATOR.ID);
+        public static Identity<OrgRecord, Long> IDENTITY_ORG = createIdentity(Org.ORG, Org.ORG.ID);
+        public static Identity<RoleRecord, Long> IDENTITY_ROLE = createIdentity(Role.ROLE, Role.ROLE.ID);
+        public static Identity<RolePermissionRecord, Long> IDENTITY_ROLE_PERMISSION = createIdentity(RolePermission.ROLE_PERMISSION, RolePermission.ROLE_PERMISSION.ID);
+        public static Identity<SysConfigRecord, Long> IDENTITY_SYS_CONFIG = createIdentity(SysConfig.SYS_CONFIG, SysConfig.SYS_CONFIG.ID);
     }
 
     private static class UniqueKeys0 extends AbstractKeys {
-        public static final UniqueKey<AppReleaseRecord> KEY_APP_RELEASE_PRIMARY = createUniqueKey(AppRelease.APP_RELEASE, "KEY_app_release_PRIMARY", AppRelease.APP_RELEASE.ID);
-        public static final UniqueKey<MachineRecord> KEY_MACHINE_PRIMARY = createUniqueKey(Machine.MACHINE, "KEY_machine_PRIMARY", Machine.MACHINE.ID);
-        public static final UniqueKey<MachineRecord> KEY_MACHINE_UNI_MACHINE_ID = createUniqueKey(Machine.MACHINE, "KEY_machine_UNI_MACHINE_ID", Machine.MACHINE.MACHINE_ID);
-        public static final UniqueKey<MerchantRecord> KEY_MERCHANT_PRIMARY = createUniqueKey(Merchant.MERCHANT, "KEY_merchant_PRIMARY", Merchant.MERCHANT.ID);
-        public static final UniqueKey<MerchantRecord> KEY_MERCHANT_MERCHANT_ID = createUniqueKey(Merchant.MERCHANT, "KEY_merchant_MERCHANT_ID", Merchant.MERCHANT.MERCHANT_ID);
-        public static final UniqueKey<MerchantRecord> KEY_MERCHANT_MERCHANT_MERCHANT_NAME_IDX = createUniqueKey(Merchant.MERCHANT, "KEY_merchant_merchant_merchant_name_idx", Merchant.MERCHANT.MERCHANT_NAME, Merchant.MERCHANT.APP_ID);
-        public static final UniqueKey<MerchantPlatformRecord> KEY_MERCHANT_PLATFORM_PRIMARY = createUniqueKey(MerchantPlatform.MERCHANT_PLATFORM, "KEY_merchant_platform_PRIMARY", MerchantPlatform.MERCHANT_PLATFORM.ID);
-        public static final UniqueKey<MerchantPlatformRecord> KEY_MERCHANT_PLATFORM_MERCHANT_PLATFORM_UNQUE_IDX = createUniqueKey(MerchantPlatform.MERCHANT_PLATFORM, "KEY_merchant_platform_merchant_platform_unque_idx", MerchantPlatform.MERCHANT_PLATFORM.MERCHANT_ID, MerchantPlatform.MERCHANT_PLATFORM.PLATFORM_CODE, MerchantPlatform.MERCHANT_PLATFORM.STATUS, MerchantPlatform.MERCHANT_PLATFORM.APP_ID);
-        public static final UniqueKey<PayeeAccountRecord> KEY_PAYEE_ACCOUNT_PRIMARY = createUniqueKey(PayeeAccount.PAYEE_ACCOUNT, "KEY_payee_account_PRIMARY", PayeeAccount.PAYEE_ACCOUNT.ID);
-        public static final UniqueKey<PlatformRecord> KEY_PLATFORM_PRIMARY = createUniqueKey(Platform.PLATFORM, "KEY_platform_PRIMARY", Platform.PLATFORM.ID);
-        public static final UniqueKey<PlatformRecord> KEY_PLATFORM_PLATFORM_CODE_IDX = createUniqueKey(Platform.PLATFORM, "KEY_platform_platform_code_idx", Platform.PLATFORM.CODE, Platform.PLATFORM.NAME, Platform.PLATFORM.APP_ID);
-        public static final UniqueKey<QrcodeUrlRecord> KEY_QRCODE_URL_PRIMARY = createUniqueKey(QrcodeUrl.QRCODE_URL, "KEY_qrcode_url_PRIMARY", QrcodeUrl.QRCODE_URL.ID);
-        public static final UniqueKey<QrcodeUrlRecord> KEY_QRCODE_URL_QRCODE_UK = createUniqueKey(QrcodeUrl.QRCODE_URL, "KEY_qrcode_url_qrcode_uk", QrcodeUrl.QRCODE_URL.QRCODE_NUM);
-        public static final UniqueKey<RepeatedPaymentRecord> KEY_REPEATED_PAYMENT_PRIMARY = createUniqueKey(RepeatedPayment.REPEATED_PAYMENT, "KEY_repeated_payment_PRIMARY", RepeatedPayment.REPEATED_PAYMENT.ID);
-        public static final UniqueKey<RepeatedPaymentRecord> KEY_REPEATED_PAYMENT_SEQ_ID = createUniqueKey(RepeatedPayment.REPEATED_PAYMENT, "KEY_repeated_payment_SEQ_ID", RepeatedPayment.REPEATED_PAYMENT.SEQ_ID);
-        public static final UniqueKey<TradeInfoRecord> KEY_TRADE_INFO_PRIMARY = createUniqueKey(TradeInfo.TRADE_INFO, "KEY_trade_info_PRIMARY", TradeInfo.TRADE_INFO.ID);
-        public static final UniqueKey<TradeInfoRecord> KEY_TRADE_INFO_TRADE_NO = createUniqueKey(TradeInfo.TRADE_INFO, "KEY_trade_info_trade_no", TradeInfo.TRADE_INFO.TRADE_NO);
+        public static final UniqueKey<CheckReviewRecord> KEY_CHECK_REVIEW_PRIMARY = createUniqueKey(CheckReview.CHECK_REVIEW, "KEY_check_review_PRIMARY", CheckReview.CHECK_REVIEW.ID);
+        public static final UniqueKey<MenuResourceRecord> KEY_MENU_RESOURCE_PRIMARY = createUniqueKey(MenuResource.MENU_RESOURCE, "KEY_menu_resource_PRIMARY", MenuResource.MENU_RESOURCE.ID);
+        public static final UniqueKey<MenuResourceRecord> KEY_MENU_RESOURCE_U_IDX_RESOURCE_CODE = createUniqueKey(MenuResource.MENU_RESOURCE, "KEY_menu_resource_u_idx_resource_code", MenuResource.MENU_RESOURCE.RESOURCE_CODE);
+        public static final UniqueKey<OperationLogRecord> KEY_OPERATION_LOG_PRIMARY = createUniqueKey(OperationLog.OPERATION_LOG, "KEY_operation_log_PRIMARY", OperationLog.OPERATION_LOG.ID);
+        public static final UniqueKey<OperatorRecord> KEY_OPERATOR_PRIMARY = createUniqueKey(Operator.OPERATOR, "KEY_operator_PRIMARY", Operator.OPERATOR.ID);
+        public static final UniqueKey<OperatorRecord> KEY_OPERATOR_U_IDX_OPERATOR_NO = createUniqueKey(Operator.OPERATOR, "KEY_operator_u_idx_operator_no", Operator.OPERATOR.OPERATOR_NO);
+        public static final UniqueKey<OrgRecord> KEY_ORG_PRIMARY = createUniqueKey(Org.ORG, "KEY_org_PRIMARY", Org.ORG.ID);
+        public static final UniqueKey<RoleRecord> KEY_ROLE_PRIMARY = createUniqueKey(Role.ROLE, "KEY_role_PRIMARY", Role.ROLE.ID);
+        public static final UniqueKey<RoleRecord> KEY_ROLE_U_IDX_ROLE_NO = createUniqueKey(Role.ROLE, "KEY_role_u_idx_role_no", Role.ROLE.ROLE_NO);
+        public static final UniqueKey<RolePermissionRecord> KEY_ROLE_PERMISSION_PRIMARY = createUniqueKey(RolePermission.ROLE_PERMISSION, "KEY_role_permission_PRIMARY", RolePermission.ROLE_PERMISSION.ID);
+        public static final UniqueKey<RolePermissionRecord> KEY_ROLE_PERMISSION_U_IDX_MKEY = createUniqueKey(RolePermission.ROLE_PERMISSION, "KEY_role_permission_u_idx_mkey", RolePermission.ROLE_PERMISSION.RESOURCE_CODE, RolePermission.ROLE_PERMISSION.ROLE_NO);
+        public static final UniqueKey<SysConfigRecord> KEY_SYS_CONFIG_PRIMARY = createUniqueKey(SysConfig.SYS_CONFIG, "KEY_sys_config_PRIMARY", SysConfig.SYS_CONFIG.ID);
+        public static final UniqueKey<SysConfigRecord> KEY_SYS_CONFIG_IDX_CATEGORY_KEY = createUniqueKey(SysConfig.SYS_CONFIG, "KEY_sys_config_idx_category_key", SysConfig.SYS_CONFIG.CATEGORY, SysConfig.SYS_CONFIG.KEY);
     }
 }

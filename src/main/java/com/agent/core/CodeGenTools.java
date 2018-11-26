@@ -15,7 +15,7 @@ public class CodeGenTools {
                 .withUrl("jdbc:mysql://139.224.36.65:3307")
                 .withUser("dba")
                 .withPassword("dba")
-                .withSchema("ifpay_ccpay");
+                .withSchema("poppy_agent");
         GenerationTool.generate(configuration);
 
     }
