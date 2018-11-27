@@ -16,6 +16,7 @@ public class CodeGenTools {
                 .withUser("dba")
                 .withPassword("dba")
                 .withSchema("poppy_agent");
+
         GenerationTool.generate(configuration);
 
     }
